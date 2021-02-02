@@ -1,0 +1,62 @@
+<div ng-app="">
+	<form ng-app="" name="myForm">
+		Email:
+		<input type="email" name="myAddress" ng-model="text">
+		<span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+	</form>
+	<p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an
+		e-mail.</p>
+
+
+
+
+	<form ng-app="" name="myForm">
+		Enter your name:
+		<input name="myName" ng-model="myText" required>
+</form>
+
+		<p>Edit the text field and it will get/lose classes according to the status.</p>
+		<p><b>Note:</b> A text field with the "required" attribute is not valid when it is empty.</p>
+
+
+
+
+
+		<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+			Email:
+			<input type="email" name="myAddress" ng-model="myText" required>
+			<p>Edit the e-mail address, and try to change the status.</p>
+			<h1>Status</h1>
+			<p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+			<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+			<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+
+		</form>
+
+
+
+
+
+
+		<div data-ng-app="" data-ng-init="quantity=1;price=5">
+			<h2>Cost Calculator</h2>
+
+			Quantity: <input type="number" ng-model="quantity" /> Price:
+			<input type="number" ng-model="price" />
+
+			<p><b>Total in dollar:</b> {{quantity * price}}</p>
+
+
+
+
+
+
+
+			<p><strong>Note:</strong> We've added the <strong>replace</strong> property in this example, otherwise the
+				comment would be invisible.</p>
+
+			<p><strong>Note:</strong> You must add the value "M" to the <strong>restrict</strong> property to be able to
+				invoke the directive from a comment.</p>
+		</div>
+</div>
